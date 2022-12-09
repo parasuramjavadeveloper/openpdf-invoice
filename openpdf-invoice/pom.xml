@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.6</version>
+    </parent>
+    <groupId>com.lululemon.openpdf.poc</groupId>
+    <version>1.0</version>
+    <artifactId>openpdf-poc</artifactId>
+    <name>openpdf-poc</name>
+    <description>OpenPDF POC For Marketplaces Invoices</description>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>2.5.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.librepdf</groupId>
+            <artifactId>openpdf</artifactId>
+            <version>1.3.8</version>
+           <!-- <version>1.3.30</version>  -->
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>pdf-lulu</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <properties>
+        <pdfbox-tools.version>2.0.25</pdfbox-tools.version>
+        <pdf2dom.version>2.0.1</pdf2dom.version>
+        <itextpdf.version>5.5.10</itextpdf.version>
+        <xmlworker.version>5.5.10</xmlworker.version>
+        <poi-scratchpad.version>3.15</poi-scratchpad.version>
+        <batik-transcoder.version>1.8</batik-transcoder.version>
+        <poi-ooxml.version>3.15</poi-ooxml.version>
+        <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
+        <flying-saucer-pdf.version>9.1.20</flying-saucer-pdf.version>
+        <open-html-pdfbox.version>1.0.6</open-html-pdfbox.version>
+        <open-html-pdf-core.version>1.0.6</open-html-pdf-core.version>
+        <flying-saucer-pdf-openpdf.version>9.1.22</flying-saucer-pdf-openpdf.version>
+        <jsoup.version>1.14.2</jsoup.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+</project>
