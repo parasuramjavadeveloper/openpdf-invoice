@@ -116,6 +116,7 @@ public class OpenPDFService {
         pLogo.add(new Chunk(image1, 0, 0, true));
         pLogo.add(new Chunk(image2, 0, 0, true));
         final var logoCell = new PdfPCell();
+        logoCell.setBorder(Cell.NO_BORDER);
         logoCell.addElement(pLogo);
         logoTable.addCell(logoCell);
         document.add(logoTable);
